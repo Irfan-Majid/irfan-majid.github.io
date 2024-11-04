@@ -1278,4 +1278,27 @@ a:hover.back-to-top {
 	}
 	/* end of extra pages */
 }
+
+/* Overlay for the header */
+.header {
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your preference */
+    z-index: 1;
+}
+
+/* Ensure text container is above the overlay */
+.header .text-container {
+    position: relative;
+    z-index: 2;
+}
+
 /* end of min-width 1200px */
